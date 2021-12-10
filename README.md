@@ -8,8 +8,6 @@ Images/Project_1.png
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. 
 Alternatively, select portions of the YAML file may be used to install only certain pieces of it, such as Filebeat.
 
------------------------------------------------------------------
-
 ---
 - name: Configure Elk VM with Docker
  hosts: elkserver
@@ -55,7 +53,6 @@ Alternatively, select portions of the YAML file may be used to install only cert
          - 9200:9200
          - 5044:5044
 
------------------------------------------------------------------
 
 This document contains the following details:
 - Description of the Topology
