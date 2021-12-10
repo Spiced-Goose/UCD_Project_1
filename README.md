@@ -133,8 +133,8 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to webservers and elk to check that the installation worked as expected.
 
 - _Which file is the playbook? Where do you copy it?_
--   pentest.yml. Ansible container
+   pentest.yml. Ansible container
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
--   pentest.yml
-- _Which URL do you navigate to in order to check that the ELK server is running?
-- http://<dynamic_elk_ip>:5601/app/kibana
+   pentest.yml
+- _Which URL do you navigate to in order to check that the ELK server is running?_
+ http://<dynamic_elk_ip>:5601/app/kibana
