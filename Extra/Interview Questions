@@ -1,0 +1,46 @@
+**Question 1:  Faulty Firewall**
+
+Suppose you have a firewall that's supposed to block SSH connections, but instead lets them through. How would you debug it?
+
+Make sure each section of your response answers the questions laid out below.
+​
+1. Restate the Problem
+  If the problem appears as it has been described, it seems the firewall is letting SSH connections through the firewall, even though it should be blocking them.
+2. Provide a Concrete Example Scenario
+    - In Project 1, did you allow SSH traffic to all of the VMs on your network?
+        Yes. I allowed SSH traffic because it was the best way to securly communicate with the VMs. 
+    - Which VMs did accept SSH connections?
+        The JumpBox, Web-1, and Web-2.
+    - What happens if you try to connect to a VM that does not accept SSH connections? Why?
+        The connection would be refused. The firewall would filter out the blacklisted connection and deny entry to the machine.
+
+3. Explain the Solution Requirements
+    - If one of your Project 1 VMs accepted SSH connections, what would you assume the source of the error is?
+        Assuming it was not supposed to be accepting SSH connections, I would assume the issue stemmed from a misconfigured network security rule. 
+    - Which general configurations would you double-check?
+        I would double check that the SSH Deny rule was actually set to deny, and had not been configured to allow instead. 
+        I would also check the Default Deny rule to make sure it was actually denying all traffic and not accepting anything else.
+        Lastly, I would check to see if my IP had been whitelisted, as that might allow it through the firewall even if it had been configured to deny. 
+    - What actions would you take to test that your new configurations are effective?
+        I would attempt to recconect to the VM via SSH after changing/adding rules to deny it. 
+
+
+4. Explain the Solution Details
+    - Which specific panes in the Azure UI would you look at to investigate the problem?
+        Network Security Groups
+    - Which specific configurations and controls would you check?
+        Deny_SSH, or whatever the rule had been named, and Default_Deny. 
+    - What would you look for, specifically?
+        I would look for a deny rule that had been set to allow rather than deny.
+    - How would you attempt to connect to your VMs to test that your fix is effective?
+        SSH from another VM or from my personal machine.
+
+5. Identify Advantages/Disadvantages of the Solution
+
+    - Does your solution guarantee that the Project 1 network is now "immune" to all unauthorized access?
+        Definitely not.
+        
+    - What monitoring controls might you add to ensure that you identify any suspicious authentication attempts?
+        A listener/IDS/IPS to observe/prevent fic that passes through that may be malicious. 
+    ​
+
