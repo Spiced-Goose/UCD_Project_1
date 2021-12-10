@@ -3,7 +3,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: Update the path with the name of your diagram](Images/Project_1.png)
+Images/Project_1.png
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. 
 Alternatively, select portions of the YAML file may be used to install only certain pieces of it, such as Filebeat.
@@ -133,7 +133,6 @@ SSH into the control node and follow the steps below:
 - Update the .yml file to include webservers and elk
 - Run the playbook, and navigate to webservers and elk to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
 -   pentest.yml. Ansible container
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
